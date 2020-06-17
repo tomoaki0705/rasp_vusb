@@ -26,6 +26,7 @@ public:
         _state = true;
         _underlying.notify_one();
     }
+    ~NoResetEvent() {}
 
 private:
     std::condition_variable _underlying;
